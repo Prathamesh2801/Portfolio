@@ -3,14 +3,14 @@ import Intro from '../assets/img/about.jpg'
 export default function About () {
   return (
     <div className="min-h-screen bg-[#0f1630] flex items-center justify-center p-8">
-      <div className="max-w-5xl flex flex-col lg:flex-row items-center gap-8 md:gap-20">
-        <div className="relative">
+      <div className="max-w-5xl flex flex-col lg:flex-row items-center gap-8 md:gap-20 ">
+        <div className="relative  w-full max-w-[280px] md:max-w-[320px]">
           <div className="absolute -inset-1 bg-gradient-to-r from-cyan-300 to-blue-500 rounded-lg blur"></div>
           <div className="relative ">
             <img
               src={Intro}
               alt="Profile"
-              className="w-80 h-fit object-cover rounded-2xl"
+              className="w-full aspect-[3/4] rounded-3xl object-cover object-center"
             />
           </div>
         </div>

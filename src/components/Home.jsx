@@ -14,7 +14,7 @@ export default function Home() {
         <div className="hero bg-[#0f1630] min-h-[90vh]  flex items-center">
             <div className="hero-content flex-col text-white items-start pl-8 md:pl-16 lg:pl-56">
                 {/* Main Heading */}
-                <span className="text-4xl font-semibold text-base-300">  I'm a</span>
+                <span className="text-4xl font-semibold text-white">  I'm a</span>
                 <h1 className="font-serif text-[3.5rem] lg:text-[5.5rem] font-bold leading-tight">
                   <Typewriter words={words}/>
                 </h1>
