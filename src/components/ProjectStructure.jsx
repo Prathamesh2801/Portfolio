@@ -1,39 +1,43 @@
+import React from "react";
+import { ExternalLink } from 'lucide-react';
+
 export default function ProjectStructure({
-    showCard,
-    category,
-    ImageHref,
-    title,
-    desc,
-  }) {
-    return (
-      <div
-        className={`hero w-full min-h-[50vh] my-10 h-[85vh] lg:h-[50vh] bg-[#0f1630] ${
-          showCard === "all" || showCard === category.toLowerCase()
-            ? "block"
-            : "hidden"
-        }`}
-      >
-        <div className="hero-content h-full flex flex-col lg:flex-row gap-6 items-center justify-center">
-          {/* Image Section */}
-          <div className="relative w-full lg:w-1/2 h-1/2 lg:h-full flex items-center justify-center">
-            <img
-              src={ImageHref}
-              alt="Project"
-              className="w-full h-full object-contain rounded-lg shadow-2xl"
-            />
-          </div>
-  
-          {/* Text Content */}
-          <div className="relative w-full lg:w-1/2 h-auto lg:h-full p-4 text-center lg:text-left flex flex-col justify-center">
-            <h1 className="text-3xl lg:text-5xl font-bold">{title}</h1>
-            <p className="py-4">{desc}</p>
-            <div className="mt-4">
-              <button className="btn btn-primary" >Check Live</button>
-              <button className="btn btn-primary ml-4">Explore</button>
-            </div>
-          </div>
+  ImageHref,
+  title,
+  desc,
+  liveHref,
+}) {
+  const handleCheckLive = (liveHref) => {
+    window.open(liveHref, "_blank", "noopener,noreferrer");
+  };
+
+  return (
+    <div className="card bg-base-100 shadow-xl h-full flex flex-col">
+      <figure className="px-5 pt-5 flex-shrink-0">
+        <div className="w-full h-48 overflow-hidden rounded-xl">
+          <img
+            src={ImageHref}
+            alt={title}
+            className="w-full h-full object-contain object-center rounded-3xl"
+          />
+        </div>
+      </figure>
+      <div className="card-body flex-grow flex flex-col justify-between">
+        <div>
+          <h2 className="card-title justify-center mb-2">{title}</h2>
+          <p className="line-clamp-3 text-sm">{desc}</p>
+        </div>
+        <div className="card-actions justify-center mt-4">
+          <button
+            className="btn btn-primary"
+            onClick={() => handleCheckLive(liveHref)}
+          >
+            <ExternalLink className="w-4 h-4 mr-2" />
+            Check Live
+          </button>
+          <button className="btn btn-ghost">Explore</button>
         </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
