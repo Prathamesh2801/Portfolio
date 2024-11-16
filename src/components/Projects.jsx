@@ -22,17 +22,17 @@ export default function Projects() {
   const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
-    <section className="bg-[#0f1630] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+    <section className="bg-[#0f1630] pt-20 px-5 pb-12 lg:pt-[120px] lg:pb-[90px]">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-2">
           <div className="w-full mb-[60px] text-center">
-            <h2 className="text-white mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]">
-              Projects
+            <h2 className="text-[#a3b1d6] mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]">
+              PROJECTS
             </h2>
           </div>
         </div>
 
-        <div className="w-full flex flex-wrap justify-center -mx-2">
+        <div className="w-full flex flex-wrap justify-center -mx-2 text-[#e6e9f0]">
           <div className="w-full">
             <ul className="flex flex-wrap justify-center mb-12 space-x-1">
               {["all", "website", "game", "team", "others"].map((category) => (
@@ -40,8 +40,10 @@ export default function Projects() {
                   <button
                     onClick={() => handleProject(category)}
                     className={`btn ${
-                      showCard === category ? "btn-primary" : "btn-ghost"
-                    } capitalize`}
+                      showCard === category 
+                        ? "bg-[#3d5180] hover:bg-[#4d6499] text-[#e6e9f0]" 
+                        : "bg-transparent hover:bg-[#2a3b5e] text-[#a3b1d6]"
+                    } capitalize border border-[#3d5180] mx-2 my-2`}
                   >
                     {category === "all" ? "All Projects" : category}
                   </button>
@@ -68,7 +70,7 @@ export default function Projects() {
           <div className="w-full text-center mt-8">
             <button
               onClick={toggleShowAll}
-              className="btn text-white btn-primary btn-lg"
+              className="btn bg-[#3d5180] hover:bg-[#4d6499] text-[#e6e9f0] border-none btn-lg"
             >
               {showAll ? "Show Less" : "Show More"}
             </button>
