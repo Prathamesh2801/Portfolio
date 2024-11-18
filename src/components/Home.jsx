@@ -7,7 +7,7 @@ const words = [
   "Full Stack Developer",
   "Frontend Developer",
   "Software Developer",
-  "UI/UX Designer",
+
 ];
 
 export default function Home() {
@@ -17,8 +17,8 @@ export default function Home() {
         {/* Main Heading */}
         <span className="text-4xl font-semibold text-white"> I'm a</span>
        
-        <h1 className="font-serif text-[3.5rem] lg:text-[5.5rem] font-bold leading-tight">
-          <Typewriter words={words} />
+        <h1 className="font-serif text-[3.5rem] lg:text-[5.5rem] font-bold leading-tight" style={{ '--cursor-height': '4rem' }}>
+          <Typewriter words={words}    />
         </h1>
         {/* Button */}
         <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 text-white font-semibold hover:opacity-90 transition-opacity">

@@ -1,15 +1,16 @@
 /* File: Typewriter.css */
 
+
+
 .typewriter {
   font-family: monospace;
-
 }
 
 .typewriter .cursor {
   display: inline-block;
   width: 0.10em; /* Slightly wider for better visibility */
   min-width: 2px; /* Ensures the cursor has a visible width */
-  height: 3rem; /* Matches font height for visibility */
+  height: var(--cursor-height); /* Use the variable for height */
   background-color: white; /* High contrast with dark background */
   animation: blink-background 1s steps(2, start) infinite;
 }
