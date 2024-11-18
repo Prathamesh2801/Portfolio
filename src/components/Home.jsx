@@ -17,7 +17,7 @@ export default function Home() {
         {/* Main Heading */}
         <span className="text-4xl font-semibold text-white"> I'm a</span>
        
-        <h1 className="font-serif text-[3.5rem] lg:text-[5.5rem] font-bold leading-tight" style={{ '--cursor-height': '4rem' }}>
+        <h1 className="font-serif text-[3.5rem] lg:text-[5.5rem] font-bold leading-tight" style={{ '--cursor-height': '3.8rem' }}>
           <Typewriter words={words}    />
         </h1>
         {/* Button */}
