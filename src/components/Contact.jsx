@@ -36,14 +36,14 @@ export default function Contact() {
             >
               Drop Me a Message
             </h2>
-            <p className="text-gray-200 mb-8 text-lg"  style={{ "--cursor-height": "1.2rem" }}>
+            <div className="text-gray-200 mb-8 text-lg"  style={{ "--cursor-height": "1.2rem" }}>
               <Typewriter
                 words={msg}
                 typingSpeed={50}
                 backspaceSpeed={20}
                 delay={10000}
               />
-            </p>
+            </div>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">

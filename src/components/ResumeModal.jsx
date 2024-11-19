@@ -53,8 +53,8 @@ const ResumeModal = ({ isOpen, onClose }) => {
   const handleDownload = () => {
     // Replace with actual path to your resume PDF
     const link = document.createElement('a');
-    link.href = '../assets/img/CV.pdf';
-    link.download = 'CV.pdf';
+    link.href = '/resume.pdf';
+    link.download = 'resume.pdf';
     link.click();
   };
 
