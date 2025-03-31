@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'], // Adding custom font as serif
+        'karla': ['Karla', 'sans-serif'],
+        'jersey': ['"Jersey 15"', 'serif'],
       },
     },
   },

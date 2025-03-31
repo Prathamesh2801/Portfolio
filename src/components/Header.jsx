@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation();
 
   useEffect(() => {
+    // Set active section to portfolio if on project details page
+    if (location.pathname.includes("/project/")) {
+      setActiveSection("portfolio");
+      return;
+    }
+
     const options = {
       root: null,
       rootMargin: "-50% 0px",
@@ -26,7 +34,7 @@ export default function Header() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   const closeDrawer = () => {
     if (window.innerWidth < 1024) {
