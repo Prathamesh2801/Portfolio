@@ -8,13 +8,13 @@ import Cinemaphile5 from "../project banner/Cinemaphile/p1_login.png";
 import Cinemaphile6 from "../project banner/Cinemaphile/p1_register.png";
 
 
-import dop1 from "../project banner/dop/cpImg1.png";
-import dop2 from "../project banner/dop/cpImg2.png";
-import dop3 from "../project banner/dop/cpImg3.png";
-import dop4 from "../project banner/dop/cpImg4.png";
-import dop5 from "../project banner/dop/cpImg5.png";
-import dop6 from "../project banner/dop/cpImg6.png";
-import dop7 from "../project banner/dop/cpImg7.png";
+import dop1 from "../project banner/Dop/cpImg1.png";
+import dop2 from "../project banner/Dop/cpImg2.png";
+import dop3 from "../project banner/Dop/cpImg3.png";
+import dop4 from "../project banner/Dop/cpImg4.png";
+import dop5 from "../project banner/Dop/cpImg5.png";
+import dop6 from "../project banner/Dop/cpImg6.png";
+import dop7 from "../project banner/Dop/cpImg7.png";
 
 
 
@@ -29,10 +29,10 @@ export const project = [
   },
   {
     id: 2,
-    ImageHref: dop1,
+    ImageHref: dop2,
     category: "client projects",
     title: "Vivek Dubey - Professional Cinematographer Portfolio",
-    liveHref: "https://vivek-dubey-portfolio.vercel.app/", // Assuming this is the deployment URL
+    liveHref: "https://vivek-dubey-portfolio.vercel.app/",
     desc: "A modern, responsive portfolio showcasing the cinematographic work of Vivek Dubey across commercials, music videos, web series, and feature films.",
     bannerPage:'Cinematography',
     languages: [
