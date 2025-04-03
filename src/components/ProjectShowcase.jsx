@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -26,7 +27,7 @@ export default function ProjectShowcase({
               src={ImageHref}
               alt="Project Example"
               className="w-full h-auto rounded-lg shadow-lg relative z-10"
-            />
+            />  
           </div>
 
           {/* Project Details */}
@@ -47,16 +48,17 @@ export default function ProjectShowcase({
                 </div>
               )
             }
-            {/* <a
-              href="#"
-              className="inline-block mt-4 px-4 py-2 bg-[#5AA1E3] text-white rounded-lg hover:bg-[#4d6499]"
-            >
-              Read more
-            </a> */}
+          
             <NavLink className="inline-block mt-4 px-4 py-2 bg-[#5AA1E3] text-white rounded-lg hover:bg-[#4d6499]" to={`/project/${id}`} >
               Read More
             </NavLink>
-          </div>
+          
+           
+            <a href={liveHref} className="inline-block mt-4 px-4 ml-5 py-2 bg-[#5AA1E3] text-white rounded-lg hover:bg-[#4d6499]" target="_blank" >
+              Live Demo  
+            </a>
+            </div>
+          
         </div>
       </div>
     </section>

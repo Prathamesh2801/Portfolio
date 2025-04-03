@@ -1,6 +1,5 @@
 
 
-import { ArrowUpRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { useCallback } from "react"
 
@@ -79,7 +78,7 @@ const Tag = () => (
   </svg>
 )
 
-const ProjectBanner = () => {
+const ProjectBanner = ({projectUrl}) => {
   const canvasRef = useRef(null)
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -229,7 +228,7 @@ const ProjectBanner = () => {
   }, [drawDotMatrix])
 
   return (
-    <div className=" rounded-2xl relative w-full h-[450px] md:h-[300px]  overflow-hidden bg-black  mb-10 ">
+    <div className=" rounded-2xl relative w-full h-[450px]   overflow-hidden bg-black  mb-10 ">
       {/* Background with film strip effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-full h-8 bg-black"></div>
@@ -298,8 +297,20 @@ const ProjectBanner = () => {
               <Tag />
               <span className="text-sm font-medium">Personalized Recommendations</span>
             </div>
+            {/* CTA Button */}
           </div>
+         <div>
+              <a
+                href={projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white  text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition-colors"
+              >
+                Check Live
+              </a>
+            </div>
         </div>
+         
       </div>
 
       {/* CSS for animations */}

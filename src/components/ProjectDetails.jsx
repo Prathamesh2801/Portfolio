@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { project } from "../assets/data/projects.js";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ProjectBanner from "../assets/project banner/ProjectBanner.jsx";
+import FilmStripBanner from "../assets/project banner/FilmStripBanner.jsx";
 
 
 export default function ProjectDetails() {
@@ -16,8 +17,20 @@ export default function ProjectDetails() {
     window.scrollTo(0, 0);
   }, []);
 
+  let banner;
+  switch (projectInfo.bannerPage) {
+    case "Cinemaphile":
+      banner = <ProjectBanner projectUrl={projectInfo.liveHref} />;
+      break;
+    case "Cinematography":
+      banner = <FilmStripBanner projectUrl={projectInfo.liveHref} />;
+      break;
+    default:
+      banner = <ProjectBanner />;
+  }
+
   return (
-    <div className="min-h-screen bg-[#0f1630f1] text-white  p-6  md:py-16 md:px-28 mt-10 ">
+    <div className="min-h-screen bg-[#0f1630f1] text-white px-2 py-8   md:py-16 md:px-28 mt-10 ">
       {/* Navigation and Year */}
       <div className="flex justify-between items-center mb-5 z-10">
         <button
@@ -29,9 +42,8 @@ export default function ProjectDetails() {
         </button>
         <span className="text-gray-400">2025</span>
       </div>
-
-      {/* Project Hero Section */}
-      <ProjectBanner />
+      {/* Project Banner */}
+      {banner}
 
       <div className="flex-1 ">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">
@@ -41,7 +53,7 @@ export default function ProjectDetails() {
 
         {/* Tech Stack Tags */}
         <div className="flex flex-wrap  gap-2 mb-6">
-          {["React-Native", "Expo", "AppWrite", "NativeWind", "Animatable"].map(
+          {projectInfo.languages.map(
             (tech) => (
               <span
                 key={tech}
@@ -64,21 +76,17 @@ export default function ProjectDetails() {
             <p>Personal Project</p>
           </div>
           </div>
-          <div className="flex items-center flex-col">
-          <ArrowUpRight size={30} className="ml-4" />
-            <a href={projectInfo.liveHref} target="_blank" rel="noopener noreferrer" className="text- mb-1 text-2xl  font-jersey">Check Project Live </a>
+          <div>
+            <h3 className="text-gray-400 mb-1">Category:</h3>
+            <p>{projectInfo.category}</p>
           </div>
-        </div>
+          </div>
       </div>
       {/* Overview Section */}
       <section className="mb-16">
         <h2 className="text-3xl font-bold my-10 mb-6 ">Overview</h2>
         <p className="text-gray-400 text-lg leading-relaxed">
-          Built using React Native, this app delivers a fast, responsive, and
-          platform-agnostic experience, making it accessible across Android and
-          iOS devices. By leveraging the power of modern technologies, the app
-          ensures smooth performance and minimal buffering, even on
-          low-bandwidth networks.
+          {projectInfo.briefDesc}
         </p>
       </section>
 
@@ -88,7 +96,7 @@ export default function ProjectDetails() {
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}
         >
-          <Masonry gutter={"1.5rem"}>
+          <Masonry gutter={"2rem"}>
             {projectInfo.projectPics.map((pic, index) => (
               <img
                 key={index}

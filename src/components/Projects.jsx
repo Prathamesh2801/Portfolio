@@ -56,6 +56,7 @@ export default function Projects() {
               category={project.category}
               languages={project.languages}
               id={project.id}
+              key={project.id}
              />
           ))}
     
