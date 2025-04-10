@@ -93,6 +93,8 @@ const FilmStripBanner = ({projectUrl} ) => {
               </span>
             </div>
 
+          </div>
+
             {/* CTA Button */}
             <div>
               <a
@@ -101,10 +103,9 @@ const FilmStripBanner = ({projectUrl} ) => {
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition-colors"
               >
-                View Portfolio
+               Check Live
               </a>
             </div>
-          </div>
 
           {/* Right side - Visual elements */}
           <div className="hidden md:flex md:w-1/2 relative">

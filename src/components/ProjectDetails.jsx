@@ -5,6 +5,9 @@ import { project } from "../assets/data/projects.js";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ProjectBanner from "../assets/project banner/ProjectBanner.jsx";
 import FilmStripBanner from "../assets/project banner/FilmStripBanner.jsx";
+import TimerGameBanner from "../assets/project banner/TimerGameBanner.jsx";
+import PlacePickerBanner from "../assets/project banner/PlacePickerBanner.jsx";
+import InvestmentCalculatorBanner from "../assets/project banner/InvestmentCalculatorBanner.jsx";
 
 
 export default function ProjectDetails() {
@@ -24,6 +27,15 @@ export default function ProjectDetails() {
       break;
     case "Cinematography":
       banner = <FilmStripBanner projectUrl={projectInfo.liveHref} />;
+      break;
+    case "Precision Timer":
+      banner = <TimerGameBanner  projectUrl={projectInfo.liveHref} />;
+      break;
+    case "Place Picker":
+      banner = <PlacePickerBanner projectUrl={projectInfo.liveHref} />;
+      break;
+    case "Investment Calculator":
+      banner = <InvestmentCalculatorBanner  projectUrl={projectInfo.liveHref} />;
       break;
     default:
       banner = <ProjectBanner />;
@@ -92,7 +104,7 @@ export default function ProjectDetails() {
 
       {/* Design Screens Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-6">Design Screens</h2>
+       {projectInfo.projectPics > 0 && <h2 className="text-3xl font-bold mb-6">Design Screens</h2>}
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}
         >

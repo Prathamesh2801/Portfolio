@@ -9,7 +9,6 @@ import Cinemaphile4 from "../project banner/Cinemaphile/p1_bookmarks.png";
 import Cinemaphile5 from "../project banner/Cinemaphile/p1_login.png";
 import Cinemaphile6 from "../project banner/Cinemaphile/p1_register.png";
 
-
 import dop1 from "../project banner/Dop/cpImg1.png";
 import dop2 from "../project banner/Dop/cpImg2.png";
 import dop3 from "../project banner/Dop/cpImg3.png";
@@ -18,16 +17,54 @@ import dop5 from "../project banner/Dop/cpImg5.png";
 import dop6 from "../project banner/Dop/cpImg6.png";
 import dop7 from "../project banner/Dop/cpImg7.png";
 
-
-
 export const project = [
   {
     id: 1,
     ImageHref: TimerGameImg,
     category: "self projects",
-    title: "Final Countdown",
-    liveHref: "https://pratham-timergame.vercel.app/",
-    desc: "An interactive countdown game challenging players to stop the timer at the perfect moment. Test your timing and reflexes!",
+    title: "Precision Timer Game",
+    liveHref: "https://pratham-timergame.vercel.app/", // Local development URL
+    desc: "A challenging timer-based game that tests your precision and timing skills. Stop the timer as close to the target time as possible to achieve the highest score.",
+    bannerPage: "Precision Timer",
+    languages: ["React", "Tailwind CSS", "DaisyUI", "Framer Motion", "Vite"],
+    briefDesc:
+      "A fun and engaging timer-based game built with modern React technologies. The game challenges players to stop a timer at a specific target time, calculating their score based on accuracy. The application features a clean, responsive design with smooth animations and interactive feedback.",
+    projectPics: [],
+    features: [
+      {
+        title: "Precision Timing",
+        desc: "Challenge yourself to stop the timer as close to the target time as possible for maximum points.",
+      },
+      {
+        title: "Score Calculation",
+        desc: "Automatic score calculation based on timing accuracy, with higher scores for better precision.",
+      },
+      {
+        title: "Modal Feedback",
+        desc: "Interactive result modal that displays your score, target time, and remaining time.",
+      },
+      {
+        title: "Responsive Design",
+        desc: "Fully responsive interface that works seamlessly on desktop and mobile devices.",
+      },
+      {
+        title: "Smooth Animations",
+        desc: "Fluid animations using Framer Motion for enhanced user experience.",
+      },
+      {
+        title: "Interactive Elements",
+        desc: "Dynamic UI elements that provide immediate feedback during gameplay.",
+      },
+      {
+        title: "Game Reset",
+        desc: "Easy-to-use reset functionality that allows players to start a new game quickly.",
+      },
+
+      {
+        title: "Cross-platform Compatibility",
+        desc: "Works perfectly across all modern browsers and devices.",
+      },
+    ],
   },
   {
     id: 2,
@@ -36,7 +73,7 @@ export const project = [
     title: "Vivek Dubey - Professional Cinematographer Portfolio",
     liveHref: "https://vivek-dubey-portfolio.vercel.app/",
     desc: "A modern, responsive portfolio showcasing the cinematographic work of Vivek Dubey across commercials, music videos, web series, and feature films.",
-    bannerPage:'Cinematography',
+    bannerPage: "Cinematography",
     languages: [
       "React",
       "Tailwind CSS",
@@ -46,15 +83,7 @@ export const project = [
     ],
     briefDesc:
       "A comprehensive cinematography portfolio that showcases various projects across different genres. The website features a modern tech stack with React 18 and Vite for optimal performance. It includes interactive components, smooth animations with Framer Motion, and a responsive design built with Tailwind CSS and DaisyUI. The portfolio efficiently manages media assets through Cloudinary integration, ensuring optimal loading times and quality across devices.",
-      projectPics: [
-        dop1,
-        dop2,
-        dop3,
-        dop4,
-        dop5,
-        dop6,
-        dop7,
-      ],
+    projectPics: [dop1, dop2, dop3, dop4, dop5, dop6, dop7],
     features: [
       {
         title: "Dynamic Media Showcase",
@@ -110,7 +139,7 @@ export const project = [
     liveHref: "https://cinemaphile-client.onrender.com/",
     desc: "A full-stack web application that allows users to explore, review, and discuss movies, combining a modern React frontend with a robust Node.js backend.",
     languages: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    bannerPage:'Cinemaphile',
+    bannerPage: "Cinemaphile",
     briefDesc:
       "Cinemaphile is a comprehensive movie platform that features a modern tech stack with React 18 and TypeScript on the frontend, powered by Vite for optimal development experience. The frontend includes interactive components, real-time updates, and a clean UI built with Tailwind CSS. The backend is built on Node.js with Express, featuring secure authentication, MongoDB integration, and a RESTful API architecture. The application includes modern features like commenting system integration (Giscus) and analytics tracking, making it a full-featured platform for movie enthusiasts to share and discuss their favorite films.",
     projectPics: [
@@ -174,76 +203,89 @@ export const project = [
     id: 4,
     ImageHref: PlaceKeeperImg,
     category: "self projects",
-    title: "My NoteBook",
+    title: "Place Picker",
     liveHref: "https://place-picker-v0.vercel.app/",
-    desc: "Personal note-taking application for creating, organizing, and managing digital notes securely in one place.",
+    desc: "A React-based place picker application that helps users select and manage locations using geolocation and distance sorting.",
+    bannerPage: "Place Picker",
+    languages: ["React 18", "Vite", "JavaScript"],
+    briefDesc:
+      "A React application that allows users to pick and manage places using geolocation. Built with React 18 and Vite, featuring a modern UI and location-based functionality.",
+    projectPics: [],
+    features: [
+      {
+        title: "Geolocation Integration",
+        desc: "Utilizes browser geolocation to sort places by distance from user's current location.",
+      },
+      {
+        title: "React Hooks",
+        desc: "Leverages modern React hooks including useEffect, useState, and useRef for state management.",
+      },
+      {
+        title: "Component-based Architecture",
+        desc: "Organized code structure with reusable components for better maintainability.",
+      },
+      {
+        title: "Local Storage",
+        desc: "Persists selected places using localStorage for data persistence.",
+      },
+      {
+        title: "Vite Integration",
+        desc: "Built with Vite for fast development and optimized production builds.",
+      },
+      {
+        title: "Modern UI",
+        desc: "Clean and user-friendly interface for place selection and management.",
+      },
+      {
+        title: "TypeScript Support",
+        desc: "Includes TypeScript configuration for type safety and better development experience.",
+      },
+    ],
   },
   {
-    id: 1,
+    id: 5,
     ImageHref: InvestmentImg,
     category: "self projects",
     title: "Investment Calculator",
-    liveHref: "N/A",
+    liveHref: "https://investment-calculator-v0.vercel.app/",
     desc: "A modern investment calculator built with React and Vite, designed to help users calculate and visualize their investment growth.",
     bannerPage: "Investment Calculator",
-    "languages": [
-      "React 18",
-      "Vite",
-      "TypeScript"
-    ],
-    briefDesc: "A React-based investment calculator application that helps users calculate investment growth. Built with modern tools including React 18, Vite for fast development, and TypeScript for type safety. The project follows best practices with ESLint for code quality.",
-    "projectPics": [
-      "calculator-view",
-      "results-view",
-      "settings-view"
-    ],
+    languages: ["React 18", "Vite", "TypeScript"],
+    briefDesc:
+      "A React-based investment calculator application that helps users calculate investment growth. Built with modern tools including React 18, Vite for fast development, and TypeScript for type safety. The project follows best practices with ESLint for code quality.",
+    projectPics: [],
     features: [
       {
-        "title": "Modern Development Setup",
-        "desc": "Built with Vite for fast development and optimized production builds."
+        title: "Modern Development Setup",
+        desc: "Built with Vite for fast development and optimized production builds.",
+      },
+
+      {
+        title: "React 18",
+        desc: "Leverages the latest React features and performance improvements.",
       },
       {
-        "title": "Type Safety",
-        "desc": "Uses TypeScript for enhanced code reliability and maintainability."
+        title: "Component-based Architecture",
+        desc: "Organized code structure with reusable components for better maintainability.",
       },
       {
-        "title": "Code Quality",
-        "desc": "Includes ESLint configuration for consistent code style and error prevention."
+        title: "Development Tools",
+        desc: "Includes development and preview scripts for easy local testing.",
       },
       {
-        "title": "React 18",
-        "desc": "Leverages the latest React features and performance improvements."
+        title: "Production Ready",
+        desc: "Includes build configuration for deployment.",
       },
       {
-        "title": "Component-based Architecture",
-        "desc": "Organized code structure with reusable components for better maintainability."
+        title: "Modern UI",
+        desc: "Clean and modern interface for investment calculations.",
       },
       {
-        "title": "Asset Management",
-        "desc": "Includes proper asset organization and management."
+        title: "Performance Optimized",
+        desc: "Built with Vite for fast development and optimized production builds.",
       },
-      {
-        "title": "Development Tools",
-        "desc": "Includes development and preview scripts for easy local testing."
-      },
-      {
-        "title": "Production Ready",
-        "desc": "Includes build configuration for deployment."
-      },
-      {
-        "title": "Modern UI",
-        "desc": "Clean and modern interface for investment calculations."
-      },
-      {
-        "title": "Performance Optimized",
-        "desc": "Built with Vite for fast development and optimized production builds."
-      },
-      {
-        "title": "Development Flexibility",
-        "desc": "Includes linting and preview capabilities for better development experience."
-      }
-    ]
-  }
+    ],
+  },
   // {
   //   id: 4,
   //   ImageHref: myNotebookImg,
