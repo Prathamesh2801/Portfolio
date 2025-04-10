@@ -1,4 +1,6 @@
-import TimerGameImg from "../img/timergame.png";
+import TimerGameImg from "../project banner/timerGame/timer.png";
+import PlaceKeeperImg from "../project banner/placeKeeper/placeKeeper.png";
+import InvestmentImg from "../project banner/InvestmentCal/investment.png";
 
 import Cinemaphile1 from "../project banner/Cinemaphile/p1_home.png";
 import Cinemaphile2 from "../project banner/Cinemaphile/p1_browse.png";
@@ -21,8 +23,8 @@ import dop7 from "../project banner/Dop/cpImg7.png";
 export const project = [
   {
     id: 1,
-    ImageHref: dop1,
-    category: "game",
+    ImageHref: TimerGameImg,
+    category: "self projects",
     title: "Final Countdown",
     liveHref: "https://pratham-timergame.vercel.app/",
     desc: "An interactive countdown game challenging players to stop the timer at the perfect moment. Test your timing and reflexes!",
@@ -168,6 +170,80 @@ export const project = [
       },
     ],
   },
+  {
+    id: 4,
+    ImageHref: PlaceKeeperImg,
+    category: "self projects",
+    title: "My NoteBook",
+    liveHref: "https://place-picker-v0.vercel.app/",
+    desc: "Personal note-taking application for creating, organizing, and managing digital notes securely in one place.",
+  },
+  {
+    id: 1,
+    ImageHref: InvestmentImg,
+    category: "self projects",
+    title: "Investment Calculator",
+    liveHref: "N/A",
+    desc: "A modern investment calculator built with React and Vite, designed to help users calculate and visualize their investment growth.",
+    bannerPage: "Investment Calculator",
+    "languages": [
+      "React 18",
+      "Vite",
+      "TypeScript"
+    ],
+    briefDesc: "A React-based investment calculator application that helps users calculate investment growth. Built with modern tools including React 18, Vite for fast development, and TypeScript for type safety. The project follows best practices with ESLint for code quality.",
+    "projectPics": [
+      "calculator-view",
+      "results-view",
+      "settings-view"
+    ],
+    features: [
+      {
+        "title": "Modern Development Setup",
+        "desc": "Built with Vite for fast development and optimized production builds."
+      },
+      {
+        "title": "Type Safety",
+        "desc": "Uses TypeScript for enhanced code reliability and maintainability."
+      },
+      {
+        "title": "Code Quality",
+        "desc": "Includes ESLint configuration for consistent code style and error prevention."
+      },
+      {
+        "title": "React 18",
+        "desc": "Leverages the latest React features and performance improvements."
+      },
+      {
+        "title": "Component-based Architecture",
+        "desc": "Organized code structure with reusable components for better maintainability."
+      },
+      {
+        "title": "Asset Management",
+        "desc": "Includes proper asset organization and management."
+      },
+      {
+        "title": "Development Tools",
+        "desc": "Includes development and preview scripts for easy local testing."
+      },
+      {
+        "title": "Production Ready",
+        "desc": "Includes build configuration for deployment."
+      },
+      {
+        "title": "Modern UI",
+        "desc": "Clean and modern interface for investment calculations."
+      },
+      {
+        "title": "Performance Optimized",
+        "desc": "Built with Vite for fast development and optimized production builds."
+      },
+      {
+        "title": "Development Flexibility",
+        "desc": "Includes linting and preview capabilities for better development experience."
+      }
+    ]
+  }
   // {
   //   id: 4,
   //   ImageHref: myNotebookImg,
@@ -175,13 +251,5 @@ export const project = [
   //   title: "My NoteBook",
   //   liveHref: "https://mynotebookv0.vercel.app/",
   //   desc: "Personal note-taking application for creating, organizing, and managing digital notes securely in one place.",
-  // },
-  // {
-  //   id: 5,
-  //   ImageHref: InvestmentImg,
-  //   category: "self projects",
-  //   title: "Investment Calculator",
-  //   liveHref: "https://investment-calculator-v0.vercel.app/",
-  //   desc: "Financial tool for calculating investment returns, compound interest, and analyzing long-term investment growth.",
   // },
 ];
